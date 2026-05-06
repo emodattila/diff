@@ -38,8 +38,8 @@ st.button("Återställ värden", on_click=reset)
 p = st.session_state.params
 
 alpha = st.slider("α – Astrophage växer", 0.0, 2.0, p["alpha"], 0.01)
-beta = st.slider("β – Taumoeba äter Astrophage", 0.0, 1, p["beta"], 0.01)
-delta = st.slider("δ – Taumoeba växer av mat", 0.0, 1, p["delta"], 0.01)
+beta = st.slider("β – Taumoeba äter Astrophage", 0.0, 1.0, p["beta"], 0.01)
+delta = st.slider("δ – Taumoeba växer av mat", 0.0, 1.0, p["delta"], 0.01)
 gamma = st.slider("γ – Taumoeba dör utan mat", 0.0, 2.0, p["gamma"], 0.01)
 
 x0 = st.slider("Startvärde Astrophage", 1.0, 200.0, p["x0"], 1.0)
