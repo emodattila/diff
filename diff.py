@@ -86,11 +86,11 @@ ax.plot(ts, xs, label="Astrophage")
 ax.plot(ts, ys, label="Taumoeba")
 
 # Egyensúlyi vonalak
-if x_eq is not None:
-    ax.axhline(y=x_eq, linestyle="--", label="Jämvikt Astrophage")
+if jämvikt_x is not None:
+    ax.axhline(y=jämvikt_x, linestyle="--", label="Jämvikt Astrophage")
 
-if y_eq is not None:
-    ax.axhline(y=y_eq, linestyle="--", label="Jämvikt Taumoeba")
+if jämvikt_y is not None:
+    ax.axhline(y=jämvikt_y, linestyle="--", label="Jämvikt Taumoeba")
 
 ax.set_xlabel("Tid")
 ax.set_ylabel("Population")
