@@ -79,7 +79,26 @@ if jämvikt_x is not None:
     st.write(f"Rovdjur: {jämvikt_y:.2f}")
 else:
     st.warning("Kan inte beräkna jämvikt (beta eller delta = 0)")
+# Grafikon
+fig, ax = plt.subplots(figsize=(10, 5))
 
+ax.plot(ts, xs, label="Astrophage")
+ax.plot(ts, ys, label="Taumoeba")
+
+# Egyensúlyi vonalak
+if x_eq is not None:
+    ax.axhline(y=x_eq, linestyle="--", label="Jämvikt Astrophage")
+
+if y_eq is not None:
+    ax.axhline(y=y_eq, linestyle="--", label="Jämvikt Taumoeba")
+
+ax.set_xlabel("Tid")
+ax.set_ylabel("Population")
+ax.set_title("Lotka–Volterra-modell")
+ax.legend()
+ax.grid(True)
+
+st.pyplot(fig)
 fig, ax = plt.subplots(figsize=(10, 5))
 ax.plot(ts, xs, label="Astrophage")
 ax.plot(ts, ys, label="Taumoeba")
