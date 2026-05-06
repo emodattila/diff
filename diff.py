@@ -99,16 +99,15 @@ ax.legend()
 ax.grid(True)
 
 st.pyplot(fig)
-fig, ax = plt.subplots(figsize=(10, 5))
-ax.plot(ts, xs, label="Astrophage")
-ax.plot(ts, ys, label="Taumoeba")
-ax.set_xlabel("Tid")
-ax.set_ylabel("Population")
-ax.set_title("Lotka–Volterra-modell")
-ax.legend()
-ax.grid(True)
+fig2, ax2 = plt.subplots()
+ax2.plot(xs, ys)
+ax2.scatter([x_eq], [y_eq], marker="o")  # egyensúly pont
+ax2.set_xlabel("Astrophage")
+ax2.set_ylabel("Taumoeba")
+ax2.set_title("Fasdiagram")
+ax2.grid(True)
 
-st.pyplot(fig)
+st.pyplot(fig2)
 
 st.markdown("### Ekvationerna")
 
