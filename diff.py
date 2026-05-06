@@ -65,6 +65,20 @@ for i in range(n):
     ts.append(t)
     xs.append(x)
     ys.append(y)
+# Jämvikt
+if beta > 0 and delta > 0:
+    jämvikt_x = gamma / delta
+    jämvikt_y = alfa / beta
+else:
+    jämvikt_x = None
+    jämvikt_y = None
+
+st.markdown("### Jämviktsläge")
+if jämvikt_x is not None:
+    st.write(f"Bytesdjur: {jämvikt_x:.2f}")
+    st.write(f"Rovdjur: {jämvikt_y:.2f}")
+else:
+    st.warning("Kan inte beräkna jämvikt (beta eller delta = 0)")
 
 fig, ax = plt.subplots(figsize=(10, 5))
 ax.plot(ts, xs, label="Astrophage")
