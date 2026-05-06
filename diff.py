@@ -101,7 +101,7 @@ ax.grid(True)
 st.pyplot(fig)
 fig2, ax2 = plt.subplots()
 ax2.plot(xs, ys)
-ax2.scatter([x_eq], [y_eq], marker="o")  # egyensúly pont
+ax2.scatter([jämvikt_x], [jämvikt_y], marker="o")  # egyensúly pont
 ax2.set_xlabel("Astrophage")
 ax2.set_ylabel("Taumoeba")
 ax2.set_title("Fasdiagram")
