@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Apr  3 09:12:01 2026
+
+@author: emokov
+"""
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
