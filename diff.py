@@ -68,7 +68,7 @@ for i in range(n):
 # Jämvikt
 if beta > 0 and delta > 0:
     jämvikt_x = gamma / delta
-    jämvikt_y = alfa / beta
+    jämvikt_y = alpha / beta
 else:
     jämvikt_x = None
     jämvikt_y = None
