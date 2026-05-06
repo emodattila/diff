@@ -75,8 +75,8 @@ else:
 
 st.markdown("### Jämviktsläge")
 if jämvikt_x is not None:
-    st.write(f"Bytesdjur: {jämvikt_x:.2f}")
-    st.write(f"Rovdjur: {jämvikt_y:.2f}")
+    st.write(f"Astrophage: {jämvikt_x:.2f}")
+    st.write(f"Taumoeba: {jämvikt_y:.2f}")
 else:
     st.warning("Kan inte beräkna jämvikt (beta eller delta = 0)")
 # Grafikon
@@ -90,7 +90,7 @@ if jämvikt_x is not None:
     ax.axhline(y=jämvikt_x, linestyle="--", label="Jämvikt Astrophage")
 
 if jämvikt_y is not None:
-    ax.axhline(y=jämvikt_y, linestyle="--", label="Jämvikt Taumoeba")
+    ax.axhline(y=jämvikt_y, linestyle="--",color="red", label="Jämvikt Taumoeba")
 
 ax.set_xlabel("Tid")
 ax.set_ylabel("Population")
